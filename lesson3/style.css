@@ -1,0 +1,32 @@
+div {
+    display: inline-block;
+    
+   
+}
+body {
+    height: 5000px;
+}
+.content {
+    background-color: red;
+    height: 500px;
+    position: fixed;
+    top: 50px;
+    left: 100px;
+    right: 100px;
+
+}
+
+.item {
+    background-color: blue;
+    position: absolute;
+    right: 10px;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+ 
+
+}
+.content1{
+    display: block;
+    font-size: 70px;
+}
