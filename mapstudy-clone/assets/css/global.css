@@ -1,0 +1,26 @@
+/* Nomarlize */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input:focus-visible{
+    outline: none;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Global */
+html{
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+.icon-mgr-8 {
+    margin-right: 8px;
+}
+hr {
+    border-top: 1px solid #ccc;
+    border-bottom: none;
+}
