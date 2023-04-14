@@ -1,0 +1,59 @@
+.footer {
+    margin-top: 40px;
+    padding-top: 30px;
+
+}
+.footer svg {
+    fill: #0763c6;
+    height: 32px;
+}
+.footer-content {
+    background-color: #0763c6;
+
+}
+.footer-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px!important;
+}
+
+.footer-text {
+    color: white;
+    font-size: 14px;
+    margin: 24px 0;
+}
+
+.icon-round {
+    border: 2px solid white;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+
+/* Hiệu ứng */
+@keyframes hotlineBlink{
+    from{
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    to{
+        transform: rotate(-30deg);
+        opacity: 0.4;
+    }
+}
+
+@media (max-width: 1023px) {
+    .header-menu-item {
+        flex-basis: 100%;
+    }
+    .contact, .hotline{
+        justify-content: center;
+    }
+    .social-title {
+        display: none;
+    }
+    .video-player, .video-list {
+        flex-basis: 100%;
+    }
+  
+}

@@ -1,89 +1,7 @@
-.header {
-    
-}
 
-.header-top{
-    background-color: #F2f2f2;
-    padding: 3px 0;
-}
-
-.header .login {
-    background-color: #1890FF;
-    height: 35px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 16px;
-}
-
-.header .register {
-    background-color: #ff4d4f;
-    height: 35px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 16px;
-}
-
-.header-content {
-    height: 120px;
-    display: flex;
-    align-items: center;
-}
-.header .header-logo-img{
-    width: 100%;
-}
-.header-search {
-    display: flex;
-    height: 50px;
-}
-.header-search-input{
-    width: 100%;
-    padding-left: 16px ;
-    border: 1px solid #F2f2f2;
-    color: #b9b7b7;
-    border-right: none;
-}
-.header-search-btn{
-    border: 1px solid #F2f2f2;
-    border-left: none;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bolder;
-
-}
-
-.header-active-tag {
-    height: 50px;
-    background-color: #0C78DA;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-.header-menu {
-    background-color: #0C78DA;
-}
-.header-menu-item {
-    padding: 16px;
-    font-size: 15px;
-    color: white;
-    text-transform: uppercase;
-}
-.header-menu-item:hover {
-    background-color: #20bcf0;
-}
 
 .main {
     margin-top: 20px!important;
-    min-height: 2000px;
 }
 .intro-img{
     width: 100%;
@@ -126,6 +44,7 @@
 }
 .contact-phone,.contact-facebook{
     color: #1890FF;
+    display: block;
 }
 .count-down{
     padding: 14px;
@@ -179,18 +98,95 @@
 }
 
 
-
-
-
-
-/* Hiệu ứng */
-@keyframes hotlineBlink{
-    from{
-        transform: rotate(0deg);
-        opacity: 1;
-    }
-    to{
-        transform: rotate(-30deg);
-        opacity: 0.4;
-    }
+.main-title {
+    color: #2970b8;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 40px 0 20px 0 ;
+    text-align: center;
 }
+.main-title span {
+
+    border-bottom: 2px solid #0763c6;
+  
+}
+
+.course-item {
+    box-shadow: 0 0 5px 0 hsla(0,0%,64.7%,.75);
+    border-radius: 6px;
+}
+.course-img {
+    width: 100%;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+
+}
+.course-name {
+    padding: 10px;
+    color: #1890ff;
+    font-weight: 500;
+    font-size: 18px;
+}
+.course-teacher {
+    padding: 0 10px 10px 10px;
+    font-weight: 500;
+    color: #595057;
+}
+.course-teacher span {
+    color: red;
+}
+.courses .col {
+    margin-bottom: 20px;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.video-player {
+    flex-basis: 70%;
+}
+.video-list {
+    flex-basis: 30%;
+    background-color: #ccc;
+    overflow-y: scroll;
+    height: 480px;
+
+}
+
+.video-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #48708D;
+    cursor: pointer;
+
+}
+.video-item:hover {
+    background-color: #2c536f;
+}
+
+.video-img {
+    flex-basis: 20%;
+}
+.video-img img {
+    width: 100%;
+}
+.video-content {
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+
+}
+.video-course span {
+    color: rgb(81, 237, 81);
+
+}
+
