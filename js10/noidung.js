@@ -1,0 +1,1 @@
+// 1. Luồng: javascript chỉ có 1 luồng duy nhất
