@@ -53,9 +53,7 @@
 
 // console.log(1)
 // console.log(2)
-// setTimeout(()=>{
-//     console.log(3)
-// }, 0)
+// setTimeout(()=>, 3000)
 // console.log(4)
 // console.log(5)
 // console.log(6)
@@ -69,29 +67,121 @@
 // callback queue: A: () =>  console.log(3)
 // event loop:
 
-function dongBo(a){
-    console.log("Thực hiện xong",a)
-}
+// function dongBo(a){
+//     console.log("Thực hiện xong",a)
+// }
 
-function batDongBo(a,callback=function(){}){
-    setTimeout(function(){
-        console.log("Thực hiện xong",a)
-        callback()
-    },Math.random()*2000)
-}
+// function batDongBo(a,callback=function(){}){
+//     setTimeout(function(){
+//         console.log("Thực hiện xong",a)
+//         callback()
+//     },Math.random()*2000)
+// }
 
-dongBo(1)
-dongBo(2)
-batDongBo(3, function(){
-    batDongBo(4, function(){
-        batDongBo(5 , function(){
-            batDongBo(6, function (){
-                batDongBo(7)
-            })
-        })
-    })
-})
+// dongBo(1)
+// dongBo(2)
+// batDongBo(3, function(){
+//     batDongBo(4, function(){
+//         batDongBo(5 , function(){
+//             batDongBo(6, function (){
+//                 batDongBo(7)
+//             })
+//         })
+//     })
+// })
 
 
 
 //xử lý bất đồng bộ: biến code bất đồng bộ >> trông như đồng bộ
+
+// Bất đồng bộ: cần điều kiện gì đó để thực hiện 1 việc
+// setTimeout(viecMuonLam,3000)
+// setInterval(viecMuonLam,2000)
+// Button.onClick(viecMuonLam)
+
+
+// console.log(1)
+// console.log(2)
+// setTimeout(()=>{
+//     console.log(3)
+//     setTimeout(()=>{
+//         console.log(4)
+//         setTimeout(()=>{
+//             console.log(5)
+//         },3000)
+//     },3000)    
+// },3000)
+
+// Xử lí bất đồng bộ: muốn thực hiện 1 đoạn code sau khi code bất đồng bộ thực hiện xong
+
+
+
+// new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         const randomNumber = Math.floor( Math.random()*10)
+//         if (true){
+//             resolve(randomNumber)
+//         }
+//         else reject("thất bại")
+//     },2000)
+// })
+// .then(data=>{
+//     console.log(data)
+//     return new Promise((resolve) => {
+//         setTimeout(()=>{
+//             resolve(data+1) 
+//         },3000)
+//     })
+// })
+// .then(data=>{
+//     console.log(data)
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve(data+1)
+//         }, 3000);
+//     })
+// })
+// .then(data=>{
+//     console.log(data)
+//     return data
+// })
+// .then(data=> console.log(data))
+// .catch(err=>console.log(err))
+
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+//       .then(response => {
+//         return(response.json())
+//       }).then(data=>console.log(data))
+
+
+// async function getData(){
+// //     await new Promise((resolve, reject) => {
+// //         setTimeout(()=>{
+// //             console.log(0)
+// //             resolve(0)
+// //         },3000)
+// //     })
+// //      console.log(1)
+// //      console.log(2)
+// //  console.log(3)
+
+//     try {
+//         var res = await fetch("https://jsonplaceholder.typicode.com/todos/1")
+//         var data = await res.json()
+//         console.log(data)
+//     } catch (error) {
+//         console.log(err)
+//     }
+   
+// }
+// getData()
+
+// var json = JSON.parse(`{"x":1,"y":2,"name":"huy"}`)
+
+// console.log(json)
+
+fetch("https://jsonplaceholder.typicode.com/todos/1").then(res=>res.json())
+.then(data=>{
+    const element = document.getElementById("title")
+    element.innerText = data.title
+})
