@@ -2,8 +2,10 @@
 // Tư duy chia component trong react: chia một project thành các thành phần nhỏ, các thành phần nhỏ có thể lại được chia thành các thành phần nhỏ hơn, sau đó gộp lại với nhau để thành 1 project hoàn chỉnh, giúp cấu trúc code rõ ràng, tái sử dụng
 // Có 2 kiểu: class component (cũ) và function component (yêu cầu khi tạo component phải viết hoa chữ cái đầu, nếu ko sẽ báo lỗi)
 
+// function component về bản chất  giống với func bình thường, chỉ khác là nó PHẢI return về React.createElement()
+
 function Header(){
-    return (<div>Header</div>)
+    return (<div>Header</div>) // React.createElement("div",{},"header")
 }
 const app = (<Header></Header>)  // có thể viết ngắn gọn là <Header/>
 
@@ -18,10 +20,10 @@ const app = (<Header></Header>)  // có thể viết ngắn gọn là <Header/>
         + props là đối số của component (function)
         + Tự đặt tên cho props theo kiểu camelCase
         + Có thể truyền cả callback (nếu khi khởi tạo có callback thì bắt buộc phải truyền callback vào)
-        + Có thể dùng destructuring để bỏ phần props. đi (có thể đặt giá trị default theo cú pháp của destructuring)
+        +  thể dùng destructoring để bỏ phần props. đi (có thể đặt giá trị default theo cú pháp của destructuring)
  */ 
 // ví dụ
-function PostItem(props){  // tất cả những props được truyền vào sẽ thông qua obj props, có thể đặt tên khác
+function PostItem(props){  
     props.callback(100)
     return (
         <div>
@@ -44,17 +46,18 @@ root.render(<App></App>)
 
 // Kết hợp với Object
 const MyComponent = {
+    name: "huy",
+    age:25,
     Header(){
         return <h1>Header</h1>
     },
-    MyContent (){
+    MyContent(){
         return <div>My content</div>
     }
 }
 const reactElement = <MyComponent.Header></MyComponent.Header>
 
 // boolean, null, underfine sẽ ko được render ra
-// Lưu ý khi truyền props qua dấu {}, thì mã js trong dấu {} phải truyền vào là 1 biểu thức, nghĩa là mã js ấy phải trả về giá trị. Những câu lệnh điều kiện hoặc vòng lặp sẽ không truyền được, vì nó không trả về giá trị
 
 // Truyền props giống với atribute của html
 
