@@ -1,11 +1,12 @@
-import { name, sum, MyComponent } from './myF';
-import abc from './myF';
+import { useState } from 'react';
+import Bai5 from './Bai5/Bai5';
 
 function App() {
-    console.log(abc);
+    const [x, setX] = useState(false);
     return (
         <>
-            <MyComponent></MyComponent>
+            <button onClick={() => setX(!x)}>Mount</button>
+            {x && <Bai5></Bai5>}
         </>
     );
 }
