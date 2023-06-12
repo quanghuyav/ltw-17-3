@@ -24,19 +24,19 @@ function Bai5() {
     // const [obj, setObj] = useState({ name: 'huy' });
     const [count1, setCount1] = useState(0);
     const [count2, setCount2] = useState(0);
-    console.log('Bên ngoài useEff');
+    // console.log('Bên ngoài useEff');
 
-    useEffect(() => {
-        const handleScroll = () => {
-            console.log(window.scrollY);
-        };
-        window.addEventListener('scroll', handleScroll);
-        console.log('bên trong use');
-        return () => {
-            console.log('bên trong return');
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         console.log(window.scrollY);
+    //     };
+    //     window.addEventListener('scroll', handleScroll);
+    //     console.log('bên trong use');
+    //     return () => {
+    //         console.log('bên trong return');
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
 
     // useEffect(() => {
     //     setInterval(() => {
@@ -47,10 +47,19 @@ function Bai5() {
     // }, []);
     // console.log(count1);
     // console.log('Bên ngoài');
+
+    // useEffect(() => {
+    //     const timerID = setInterval(() => {
+    //         console.log('render');
+    //         setCount1((prev) => prev + 1);
+    //     }, 1000);
+    //     return () => {
+    //         clearInterval(timerID);
+    //     };
+    // }, []);
     return (
         <>
             {' '}
-            {console.log('giao diện')}
             {/* Bài 5: {count}
             <button onClick={() => setCount(count + 1)}>clik me</button> */}
             {/* 
