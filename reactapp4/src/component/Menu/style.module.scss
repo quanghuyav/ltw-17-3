@@ -1,0 +1,24 @@
+.menu {
+    color: red;
+    font-weight: 700;
+    font-size: 20px;
+}
+.content {
+    color: yellow;
+}
+
+.menu-item {
+    color: yellow;
+}
+.bgc {
+    background-color: blue;
+}
+
+.container {
+    color: red;
+    background-color: blue;
+
+    .item {
+        font-size: 30px;
+    }
+}
