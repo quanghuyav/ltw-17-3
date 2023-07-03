@@ -1,3 +1,4 @@
+import { Container, Grid } from '@mui/material';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import SideBar from '../../components/SideBar/SideBar';
@@ -6,12 +7,19 @@ function MainLayout({ children }) {
     return (
         <>
             <Header></Header>
-            <div style={{ display: 'flex', height: '1000px' }}>
-                <div style={{ flexBasis: '70%' }}>{children}</div>
-                <div style={{ flexBasis: '20%' }}>
-                    <SideBar></SideBar>
-                </div>
-            </div>
+
+            <Container maxWidth="xl">
+                <Grid container>
+                    <Grid item xs={12} md={8}>
+                        {' '}
+                        {children}
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <SideBar></SideBar>
+                    </Grid>
+                </Grid>
+            </Container>
+
             <Footer></Footer>
         </>
     );

@@ -12,6 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 import PageMenu from '../PageMenu/PageMenu';
+import SearchBar from '../SearchBar/SearchBar';
 
 const pages = [
     {
@@ -167,8 +168,14 @@ function Header() {
                             ),
                         )}
                     </Box>
+                    <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                        <SearchBar></SearchBar>
+                    </Box>
                 </Toolbar>
             </Container>
+            <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+                <SearchBar></SearchBar>
+            </Box>
         </AppBar>
     );
 }
