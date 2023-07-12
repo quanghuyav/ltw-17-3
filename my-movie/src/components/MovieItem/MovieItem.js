@@ -2,12 +2,17 @@ import { Typography } from '@mui/material';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function HeadMovieItem({ movie }) {
+function MovieItem({ movie }) {
     const [dragging, setDragging] = useState(false);
     return (
         <Link
             title={movie.title}
-            style={{ display: 'block', padding: '5px', position: 'relative' }}
+            style={{
+                display: 'block',
+                padding: '5px',
+                position: 'relative',
+                textDecoration: 'none',
+            }}
             to={'/xem-phim'}
             onDragStart={(e) => {
                 e.preventDefault();
@@ -24,14 +29,10 @@ function HeadMovieItem({ movie }) {
                 draggable={false}
                 key={movie.title}
                 style={{ width: '100%' }}
-                src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             ></img>
             <div
                 style={{
-                    position: 'absolute',
-                    bottom: '20px',
-                    left: '20px',
-                    right: '20px',
                     width: 'inherit',
                 }}
             >
@@ -40,10 +41,10 @@ function HeadMovieItem({ movie }) {
                         textOverflow: 'ellipsis',
                         display: 'inline-block',
                         width: '100%',
-                        textShadow: '0px 2px 4px black',
                         userSelect: 'none',
+                        fontSize: '16px',
                     }}
-                    color="white"
+                    color="primary"
                     variant="h6"
                     noWrap
                 >
@@ -52,10 +53,10 @@ function HeadMovieItem({ movie }) {
                 <Typography
                     sx={{
                         fontSize: '14px',
-                        textShadow: '0px 2px 4px black',
                         userSelect: 'none',
+                        lineHeight: '1',
                     }}
-                    color="white"
+                    color="primary"
                     variant="h6"
                     noWrap
                 >
@@ -66,4 +67,4 @@ function HeadMovieItem({ movie }) {
     );
 }
 
-export default HeadMovieItem;
+export default MovieItem;
