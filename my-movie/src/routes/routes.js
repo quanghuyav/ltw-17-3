@@ -13,7 +13,8 @@ import DefaultPage from '../pages/DefaultPage/DefaultPage';
 export const publicRoutes = [
     { path: '/', Component: Home, Layout: MainLayout },
     { path: '/home', Component: Home, Layout: MainLayout },
-    { path: '/phim-le', Component: SingleMovie, Layout: MainLayout },
+    { path: '/phim-le/page/:page', Component: SingleMovie, Layout: MainLayout },
+
     { path: '/phim-bo', Component: SeriesMovie, Layout: MainLayout },
     { path: '/the-loai', Component: Genre, Layout: MainLayout },
     { path: '/quoc-gia', Component: Country, Layout: MainLayout },

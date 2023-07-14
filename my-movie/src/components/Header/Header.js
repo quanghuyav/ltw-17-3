@@ -21,7 +21,7 @@ const pages = [
     },
     {
         name: 'Phim lẻ',
-        link: '/phim-le',
+        link: '/phim-le/page/1',
     },
     {
         name: 'Phim bộ',
