@@ -16,9 +16,9 @@ export const publicRoutes = [
     { path: '/phim-le/page/:page', Component: SingleMovie, Layout: MainLayout },
 
     { path: '/phim-bo', Component: SeriesMovie, Layout: MainLayout },
-    { path: '/the-loai', Component: Genre, Layout: MainLayout },
+    { path: '/the-loai/:genre/page/:page', Component: Genre, Layout: MainLayout },
     { path: '/quoc-gia', Component: Country, Layout: MainLayout },
-    { path: '/nam-phat-hanh', Component: Year, Layout: MainLayout },
+    { path: '/nam-phat-hanh/:year/page/:page', Component: Year, Layout: MainLayout },
     { path: '/tim-kiem', Component: SearchPage, Layout: MainLayout },
     { path: '/xem-phim', Component: WatchMovie, Layout: MainLayout },
     { path: '*', Component: DefaultPage, Layout: SubLayout },

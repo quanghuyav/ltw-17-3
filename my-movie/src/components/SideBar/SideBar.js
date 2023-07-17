@@ -25,7 +25,7 @@ function SideBar() {
                         <Button
                             color="secondary"
                             component={Link}
-                            to={`/nam-phat-hanh`}
+                            to={`/nam-phat-hanh/${year}/page/1`}
                             variant="outlined"
                         >
                             {year}
