@@ -47,7 +47,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 function SearchBar() {
-    const [text, setText] = React.useState(null);
+    const [text, setText] = React.useState('');
     const navigate = useNavigate();
 
     return (
@@ -56,11 +56,11 @@ function SearchBar() {
                 <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
+                value={text}
                 onKeyDown={(e) => {
                     if (e.key == 'Enter') {
                         e.preventDefault();
-                        console.log(text);
-                        navigate('/tim-kiem');
+                        if (text) navigate('/tim-kiem/' + text);
                     }
                 }}
                 onChange={(e) => {
@@ -69,6 +69,18 @@ function SearchBar() {
                 placeholder="Search…"
                 inputProps={{ 'aria-label': 'search' }}
             />
+            {/* {text && (
+                <div>
+                    <button>Tìm kiếm</button>
+                    <button
+                        onClick={() => {
+                            setText('');
+                        }}
+                    >
+                        Xoá
+                    </button>
+                </div>
+            )} */}
         </Search>
     );
 }

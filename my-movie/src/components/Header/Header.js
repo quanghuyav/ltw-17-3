@@ -13,6 +13,8 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 import PageMenu from '../PageMenu/PageMenu';
 import SearchBar from '../SearchBar/SearchBar';
+import { useContext } from 'react';
+import { MyContext } from '../../App';
 
 const pages = [
     {
@@ -126,6 +128,7 @@ const pages = [
 ];
 
 function Header() {
+    const setThemeIndex = useContext(MyContext);
     const [anchorElNav, setAnchorElNav] = React.useState(null);
 
     const handleOpenNavMenu = (event) => {
@@ -146,6 +149,10 @@ function Header() {
                             mr: 1,
                         }}
                     />
+                    <button onClick={() => setThemeIndex(0)}>1</button>
+                    <button onClick={() => setThemeIndex(1)}>2</button>
+                    <button onClick={() => setThemeIndex(2)}>3</button>
+
                     <Typography
                         variant="h6"
                         noWrap

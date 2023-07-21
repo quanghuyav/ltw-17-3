@@ -13,7 +13,7 @@ function MovieItem({ movie }) {
                 position: 'relative',
                 textDecoration: 'none',
             }}
-            to={'/xem-phim'}
+            to={'/xem-phim/' + movie.id}
             onDragStart={(e) => {
                 e.preventDefault();
                 setDragging(true);

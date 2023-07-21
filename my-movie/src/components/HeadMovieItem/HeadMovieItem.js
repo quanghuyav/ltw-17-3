@@ -8,7 +8,7 @@ function HeadMovieItem({ movie }) {
         <Link
             title={movie.title}
             style={{ display: 'block', padding: '5px', position: 'relative' }}
-            to={'/xem-phim'}
+            to={'/xem-phim/' + movie.id}
             onDragStart={(e) => {
                 e.preventDefault();
                 setDragging(true);

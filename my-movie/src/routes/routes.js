@@ -19,7 +19,7 @@ export const publicRoutes = [
     { path: '/the-loai/:genre/page/:page', Component: Genre, Layout: MainLayout },
     { path: '/quoc-gia', Component: Country, Layout: MainLayout },
     { path: '/nam-phat-hanh/:year/page/:page', Component: Year, Layout: MainLayout },
-    { path: '/tim-kiem', Component: SearchPage, Layout: MainLayout },
-    { path: '/xem-phim', Component: WatchMovie, Layout: MainLayout },
+    { path: '/tim-kiem/:text', Component: SearchPage, Layout: MainLayout },
+    { path: '/xem-phim/:idMovie', Component: WatchMovie, Layout: MainLayout },
     { path: '*', Component: DefaultPage, Layout: SubLayout },
 ];
